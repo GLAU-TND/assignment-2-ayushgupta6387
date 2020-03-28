@@ -13,6 +13,9 @@ import java.util.Scanner;
 public class MyMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the elements which are added in binary search tree");
+        String s = scanner.nextLine();
+        String[] ar = s.split(" ");
 
     }
 }
