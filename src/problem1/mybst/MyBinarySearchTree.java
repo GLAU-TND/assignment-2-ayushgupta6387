@@ -39,4 +39,13 @@ public class MyBinarySearchTree {
         }
     }
 
+    public void inorderTraverse(TreeNode node) {
+        if (node != null) {
+            inorderTraverse(node.getLeft());
+            System.out.println(node.getData() + " ");
+            inorderTraverse(node.getRight());
+        }
+    }
+
+
 }
