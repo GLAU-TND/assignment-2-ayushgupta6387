@@ -18,5 +18,7 @@ public class MyMain {
         queue.add(new Student(5, "shyam"));
         queue.add(new Student(3, "henriques"));
         queue.add(new Student(2, "michael"));
+        System.out.println("Queue Arranging according to ROLL NUMBER : ");
+        System.out.println(queue);
     }
 }
