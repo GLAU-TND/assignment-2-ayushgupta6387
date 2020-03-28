@@ -26,6 +26,13 @@ public class MyQueue<E> {
         size++;
     }
 
+    public E dequeue() {
+        E data = front.getData();
+        front = front.getNext();
+        size--;
+        return data;
+    }
+
     private static class Node<E> {
         E data;
         Node<E> next;
