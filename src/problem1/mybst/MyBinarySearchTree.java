@@ -55,4 +55,13 @@ public class MyBinarySearchTree {
         }
     }
 
+    public void postorderTraverse(TreeNode node) {
+        if (node != null) {
+            postorderTraverse(node.getRight());
+            postorderTraverse(node.getLeft());
+            System.out.println(node.getData());
+        }
+    }
+
+
 }
