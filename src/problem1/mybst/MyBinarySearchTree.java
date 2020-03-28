@@ -47,5 +47,12 @@ public class MyBinarySearchTree {
         }
     }
 
+    public void preorderTraverse(TreeNode node) {
+        if (node != null) {
+            System.out.println(node.getData() + " ");
+            preorderTraverse(node.getLeft());
+            preorderTraverse(node.getRight());
+        }
+    }
 
 }
