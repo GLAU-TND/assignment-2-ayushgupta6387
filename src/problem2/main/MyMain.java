@@ -33,10 +33,13 @@ public class MyMain {
         tree.insert(82);
         tree.insert(93);
         System.out.println("Traverse the tree in PreOrder :");
-
+        preOrderTraverse(tree.getRoot());
+        System.out.println();
+        System.out.println("Traverse the tree in PostOrder :");
+        postOrderTraverse(tree.getRoot());
     }
 
-    public void preOrderTraverse(TreeNode node) {
+    public static void preOrderTraverse(TreeNode node) {
         if (node != null) {
             System.out.println(node.getData() + " ");
             preOrderTraverse(node.getLeft());
@@ -44,7 +47,7 @@ public class MyMain {
         }
     }
 
-    public void postOrderTraverse(TreeNode node) {
+    public static void postOrderTraverse(TreeNode node) {
         if (node != null) {
             postOrderTraverse(node.getRight());
             postOrderTraverse(node.getLeft());
