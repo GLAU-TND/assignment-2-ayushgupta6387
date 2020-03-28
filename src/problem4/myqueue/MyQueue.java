@@ -9,6 +9,7 @@ package problem4.myqueue;
 
 public class MyQueue {
     private static class Node<E> {
-
+        E data;
+        Node<E> next;
     }
 }
