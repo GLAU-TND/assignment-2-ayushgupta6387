@@ -44,5 +44,11 @@ public class MyMain {
         }
     }
 
-
+    public void postOrderTraverse(TreeNode node) {
+        if (node != null) {
+            postOrderTraverse(node.getRight());
+            postOrderTraverse(node.getLeft());
+            System.out.println(node.getData());
+        }
+    }
 }
