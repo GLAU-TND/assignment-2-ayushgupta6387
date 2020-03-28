@@ -52,4 +52,11 @@ public class MyPriorityQueue<E> {
         }
     }
 
+    public E remove() {
+        E data = front.getData();
+        front = front.getNext();
+        size--;
+        return data;
+    }
+
 }
