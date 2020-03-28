@@ -33,6 +33,11 @@ public class MyQueue<E> {
         return data;
     }
 
+    public E peek() {
+        E data = front.getData();
+        return data;
+    }
+
     private static class Node<E> {
         E data;
         Node<E> next;
