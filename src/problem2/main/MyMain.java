@@ -7,6 +7,7 @@
 package problem2.main;
 
 import problem1.mybst.MyBinarySearchTree;
+import problem1.node.TreeNode;
 
 
 // executable class
@@ -34,5 +35,14 @@ public class MyMain {
         System.out.println("Traverse the tree in PreOrder :");
 
     }
+
+    public void preOrderTraverse(TreeNode node) {
+        if (node != null) {
+            System.out.println(node.getData() + " ");
+            preOrderTraverse(node.getLeft());
+            preOrderTraverse(node.getRight());
+        }
+    }
+
 
 }
