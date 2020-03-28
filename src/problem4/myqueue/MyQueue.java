@@ -12,6 +12,19 @@ public class MyQueue<E> {
     private Node<E> rear;
     private int size = 0;
 
+    public void enqueue(E data) {
+        Node<E> node = new Node<>(data);
+        if (front == null) {
+            node.next = null;
+            front = node;
+            rear = node;
+        } else {
+            node.setNext(rear.getNext());
+            rear.setNext(node);
+            rear = node;
+        }
+        size++;
+    }
 
     private static class Node<E> {
         E data;
