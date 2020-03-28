@@ -8,6 +8,9 @@ package problem1.mybst;
 
 import problem1.node.TreeNode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 // to implement BinarySearchTree
 public class MyBinarySearchTree {
     private TreeNode root = null;
@@ -39,29 +42,53 @@ public class MyBinarySearchTree {
         }
     }
 
-    public void inorderTraverse(TreeNode node) {
+    public void inOrderTraverse(TreeNode node) {
         if (node != null) {
-            inorderTraverse(node.getLeft());
+            inOrderTraverse(node.getLeft());
             System.out.println(node.getData() + " ");
-            inorderTraverse(node.getRight());
+            inOrderTraverse(node.getRight());
         }
     }
 
-    public void preorderTraverse(TreeNode node) {
+    public void preOrderTraverse(TreeNode node) {
         if (node != null) {
             System.out.println(node.getData() + " ");
-            preorderTraverse(node.getLeft());
-            preorderTraverse(node.getRight());
+            preOrderTraverse(node.getLeft());
+            preOrderTraverse(node.getRight());
         }
     }
 
-    public void postorderTraverse(TreeNode node) {
+    public void postOrderTraverse(TreeNode node) {
         if (node != null) {
-            postorderTraverse(node.getRight());
-            postorderTraverse(node.getLeft());
+            postOrderTraverse(node.getRight());
+            postOrderTraverse(node.getLeft());
             System.out.println(node.getData());
         }
     }
 
+    public void printLeftChild(TreeNode node) {
+        int counter = 0;
+        if (node != null) {
+            Queue<TreeNode> queue = new LinkedList<>();
+            queue.add(node);
+            System.out.println("Left Childs: ");
+            while (!queue.isEmpty()) {
+                TreeNode currentNode = queue.remove();
+                if (currentNode.getLeft() == null) {
+                    counter++;
+                }
+                if (currentNode.getLeft() != null) {
+                    queue.add(currentNode.getLeft());
+                    System.out.println(currentNode.getLeft().getData() + " ");
+                }
+                if (currentNode.getRight() != null) {
+                    queue.add(currentNode.getRight());
+                }
+            }
+            System.out.println("\nNo. of Nodes with no left Child : " + counter);
+        } else {
+            throw new NullPointerException();
+        }
+    }
 
 }
