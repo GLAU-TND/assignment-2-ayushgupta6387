@@ -23,9 +23,6 @@ public class Node<E> {
         return data;
     }
 
-    public void setData(E data) {
-        this.data = data;
-    }
 
     public Node<E> getNext() {
         return next;
