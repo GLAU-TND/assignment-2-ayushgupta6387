@@ -27,7 +27,7 @@ public class MyMain {
         tree.insert(67);
         tree.insert(90);
         tree.insert(82);
-        tree.insert(93);
+        tree.insert(92);
         tree.inOrderTraverse(tree.getRoot());
         System.out.println();
         tree.preOrderTraverse(tree.getRoot());
