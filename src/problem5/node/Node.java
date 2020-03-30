@@ -6,7 +6,7 @@
  */
 package problem5.node;
 
-import problem3.details.Student;
+import problem5.student.Student;
 
 // to define node properties
 public class Node {
@@ -28,4 +28,6 @@ public class Node {
     public void setNext(Node next) {
         this.next = next;
     }
+
+
 }

@@ -6,7 +6,7 @@
  */
 package problem5.circularqueue;
 
-import problem3.node.Node;
+import problem5.node.Node;
 
 //to implement circular queue
 public class MyCircularQueue {
@@ -55,6 +55,17 @@ public class MyCircularQueue {
             getRear().setNext(getFront());
         }
         return temp;
+    }
+
+    public void traverseQueue() {
+        Node temp = getFront();
+
+        while (true) {
+            System.out.println(temp.getStudent());
+            temp = temp.getNext();
+            if (temp == getFront())
+                break;
+        }
     }
 
 }
