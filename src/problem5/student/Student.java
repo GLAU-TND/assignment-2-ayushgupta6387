@@ -37,11 +37,11 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", rollNumber=" + rollNumber +
-                ", backLogCount=" + backLog +
-                '}';
+        return "---------------------------------------" + "\n" +
+                "Name -- " + getName() + "\n" +
+                "Roll Number -- " + getRollNumber() + "\n" +
+                "Back Log Value -- " + getBackLog() + "\n" +
+                "---------------------------------------";
     }
 }
 

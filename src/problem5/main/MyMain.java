@@ -17,6 +17,7 @@ public class MyMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         MyCircularQueue circularQueue = new MyCircularQueue();
+        int count = 0;
 
         System.out.println("Enter number of records you wants to enter");
         int numberOfRecords = scan.nextInt();
@@ -30,7 +31,6 @@ public class MyMain {
             student.setRollNumber(scan.nextInt());
             System.out.println("Enter backlogs");
             int backLogs = scan.nextInt();
-
             if (backLogs > 2) {
                 System.out.println("This student is not allowed");
                 continue;
@@ -43,5 +43,12 @@ public class MyMain {
 
             numberOfRecords--;
         }
+        System.out.println("Your input details");
+        circularQueue.traverseQueue();
+        System.out.println("Removing the students if they have zero backlog");
+        circularQueue.removeZeroBacklogRecords();
+
+        System.out.println("Remaining record after deletion");
+        circularQueue.traverseQueue();
     }
 }
