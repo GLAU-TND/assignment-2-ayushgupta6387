@@ -32,10 +32,10 @@ public class MyMain {
         tree.insert(90);
         tree.insert(82);
         tree.insert(93);
-        System.out.println("Traverse the tree in PreOrder :");
+        System.out.println("Traverse the tree in the PreOrder :");
         preOrderTraverse(tree.getRoot());
         System.out.println();
-        System.out.println("Traverse the tree in PostOrder :");
+        System.out.println("Traverse the tree in the PostOrder :");
         postOrderTraverse(tree.getRoot());
     }
 
