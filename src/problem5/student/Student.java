@@ -34,4 +34,14 @@ public class Student {
     public void setBacklLogCount(int backlLogCount) {
         this.backlLogCount = backlLogCount;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNumber=" + rollNumber +
+                ", backlLogCount=" + backlLogCount +
+                '}';
+    }
 }
+
