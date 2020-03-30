@@ -30,6 +30,18 @@ public class MyMain {
             student.setRollNumber(scan.nextInt());
             System.out.println("Enter backlogs");
             int backLogs = scan.nextInt();
+
+            if (backLogs > 2) {
+                System.out.println("This student is not allowed");
+                continue;
+            }
+            student.setBackLog(backLogs);
+
+            node.setStudent(student);
+
+            circularQueue.enQueue(node);
+
+            numberOfRecords--;
         }
     }
 }
