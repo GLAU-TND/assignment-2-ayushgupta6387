@@ -5,6 +5,12 @@
  *  Time: 7:06 PM
  */
 package problem5.node;
+
+import problem3.details.Student;
+
 // to define node properties
 public class Node {
+    private Student student;
+    private Node next;
+
 }

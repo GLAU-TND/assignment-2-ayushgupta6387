@@ -9,7 +9,7 @@ package problem5.student;
 public class Student {
     private String name;
     private int rollNumber;
-    private int backlLogCount;
+    private int backLog;
 
     public String getName() {
         return name;
@@ -27,12 +27,12 @@ public class Student {
         this.rollNumber = rollNumber;
     }
 
-    public int getBacklLogCount() {
-        return backlLogCount;
+    public int getBackLog() {
+        return backLog;
     }
 
-    public void setBacklLogCount(int backlLogCount) {
-        this.backlLogCount = backlLogCount;
+    public void setBackLog(int backLog) {
+        this.backLog = backLog;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", rollNumber=" + rollNumber +
-                ", backlLogCount=" + backlLogCount +
+                ", backLogCount=" + backLog +
                 '}';
     }
 }
